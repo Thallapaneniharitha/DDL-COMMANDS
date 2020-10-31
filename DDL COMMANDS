@@ -1,0 +1,61 @@
+mysql> create table employees(enroll int,name varchar(10),branch char(3));
+Query OK, 0 rows affected (0.35 sec)
+mysql> desc employees;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| enroll | int(11)     | YES  |     | NULL    |       |
+| name   | varchar(10) | YES  |     | NULL    |       |
+| branch | char(3)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+mysql> alter table employees add result int;
+Query OK, 0 rows affected (0.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> desc employees;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| enroll | int(11)     | YES  |     | NULL    |       |
+| name   | varchar(10) | YES  |     | NULL    |       |
+| branch | char(3)     | YES  |     | NULL    |       |
+| result | int(11)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+mysql> alter table employees modify branch char(3);
+Query OK, 0 rows affected (0.08 sec)
+mysql> desc employees;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| enroll | int(11)     | YES  |     | NULL    |       |
+| name   | varchar(10) | YES  |     | NULL    |       |
+| branch | char(3)     | YES  |     | NULL    |       |
+| result | int(11)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+mysql> alter table employees change branch rajampet char(3);
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> desc employees;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| enroll   | int(11)     | YES  |     | NULL    |       |
+| name     | varchar(10) | YES  |     | NULL    |       |
+| rajampet | char(3)     | YES  |     | NULL    |       |
+| result   | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+mysql> alter table employees rename comp;
+Query OK, 0 rows affected (0.32 sec)
+mysql> desc comp;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| enroll   | int(11)     | YES  |     | NULL    |       |
+| name     | varchar(10) | YES  |     | NULL    |       |
+| rajampet | char(3)     | YES  |     | NULL    |       |
+| result   | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
